@@ -9,6 +9,9 @@ build:
   number: {{ build }}
   skip: True  # [not win]
 
+requirements:
+  run:
+    - menuinst >=1.4.17
 test:
   commands:
     - if not exist %PREFIX%\\Menu\\console_shortcut.json exit 1
