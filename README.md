@@ -1,7 +1,7 @@
 About miniforge_console_shortcut
 ================================
 
-Home: https://github.com/conda-forge/console_shortcut-feedstock
+Home: https://github.com/conda-forge/miniforge_console_shortcut-feedstock
 
 Package license: BSD-3-Clause
 
