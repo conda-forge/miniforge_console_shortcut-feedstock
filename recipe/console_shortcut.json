@@ -7,6 +7,12 @@
             "system": "%windir%\\system32\\cmd.exe",
             "scriptarguments": ["/K", "${ROOT_PREFIX}\\Scripts\\activate.bat", "${PREFIX}"],
             "icon": "${MENU_DIR}/console_shortcut.ico"
+        },
+        {
+            "name": "${DISTRIBUTION_NAME} PowerShell Prompt",
+            "system": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "scriptarguments": ["-ExecutionPolicy", "ByPass", "-NoExit", "-Command", "& '${ROOT_PREFIX}\\shell\\condabin\\conda-hook.ps1' ; conda activate '${PREFIX}'"],
+            "icon": "${MENU_DIR}/console_shortcut.ico"
         }
     ]
 }
