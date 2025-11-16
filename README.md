@@ -1,11 +1,11 @@
-About miniforge_console_shortcut
-================================
+About miniforge_console_shortcut-feedstock
+==========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/miniforge_console_shortcut-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/conda-forge/miniforge_console_shortcut-feedstock
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/miniforge_console_shortcut-feedstock/blob/master/LICENSE.txt)
 
 Summary: Command prompt shortcut for Windows with base environment activated
 
@@ -20,8 +20,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11532&branchName=master">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/miniforge_console_shortcut-feedstock?branchName=master">
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11532&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/miniforge_console_shortcut-feedstock?branchName=main">
           </a>
         </summary>
         <table>
@@ -29,8 +29,8 @@ Current build status
           <tbody><tr>
               <td>win_64</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11532&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/miniforge_console_shortcut-feedstock?branchName=master&jobName=win&configuration=win_64_" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11532&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/miniforge_console_shortcut-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -46,7 +46,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-miniforge_console_shortcut-green.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/miniforge_console_shortcut.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/miniforge_console_shortcut.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/miniforge_console_shortcut.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-miniforge__console__shortcut-green.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/miniforge_console_shortcut.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/miniforge_console_shortcut.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/miniforge_console_shortcut.svg)](https://anaconda.org/conda-forge/miniforge_console_shortcut) |
 
 Installing miniforge_console_shortcut
 =====================================
@@ -58,23 +58,49 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `miniforge_console_shortcut` can be installed with:
+Once the `conda-forge` channel has been enabled, `miniforge_console_shortcut` can be installed with `conda`:
 
 ```
 conda install miniforge_console_shortcut
 ```
 
-It is possible to list all of the versions of `miniforge_console_shortcut` available on your platform with:
+or with `mamba`:
+
+```
+mamba install miniforge_console_shortcut
+```
+
+It is possible to list all of the versions of `miniforge_console_shortcut` available on your platform with `conda`:
 
 ```
 conda search miniforge_console_shortcut --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search miniforge_console_shortcut --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search miniforge_console_shortcut --channel conda-forge
+
+# List packages depending on `miniforge_console_shortcut`:
+mamba repoquery whoneeds miniforge_console_shortcut --channel conda-forge
+
+# List dependencies of `miniforge_console_shortcut`:
+mamba repoquery depends miniforge_console_shortcut --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -84,17 +110,19 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -121,7 +149,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/miniforge_console_shortcut-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:

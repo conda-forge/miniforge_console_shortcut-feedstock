@@ -1,7 +1,10 @@
-set MENU_DIR="%PREFIX%\Menu"
-if not exist %MENU_DIR% mkdir %MENU_DIR%
+@ECHO ON
+SET "MENU_DIR=%PREFIX%\Menu"
+IF NOT EXIST "%MENU_DIR%" MKDIR "%MENU_DIR%"
 
 :: icon is in public domain: https://github.com/paomedia/small-n-flat
+copy "%RECIPE_DIR%\miniforge_console_shortcut.ico" %MENU_DIR%
+IF ERRORLEVEL 1 EXIT /B 1
 
-copy "%RECIPE_DIR%\console_shortcut.ico" %MENU_DIR%
-copy "%RECIPE_DIR%\console_shortcut.json" %MENU_DIR%
+COPY "%RECIPE_DIR%\menu.json" "%MENU_DIR%\miniforge_console_shortcut_menu.json"
+IF ERRORLEVEL 1 EXIT /B 1
