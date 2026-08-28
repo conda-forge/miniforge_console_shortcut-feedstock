@@ -26,13 +26,7 @@
                         "{{ PREFIX }}"
                     ],
                     "working_dir": "{{ HOME }}"
-                },
-                "osx": {
-                    "entitlements": [
-                        "com.apple.security.automation.apple-events"
-                    ]
-                },
-                "linux": null
+                }
             }
         }
     ]

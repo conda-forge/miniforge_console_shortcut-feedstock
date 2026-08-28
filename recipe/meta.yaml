@@ -1,17 +1,19 @@
 {% set version = "3.0" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: miniforge_console_shortcut
-  version: {{ version }}
+  version: "{{ version }}"
 
 build:
   number: {{ build }}
-  skip: True  # [not win]
+  noarch: generic
 
 requirements:
   run:
     - menuinst >=2.3.1
+    - __win
+
 test:
   commands:
     - if not exist %PREFIX%\\Menu\\miniforge_console_shortcut_menu.json exit 1  # [win]
