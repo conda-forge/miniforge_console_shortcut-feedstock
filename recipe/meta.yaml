@@ -7,11 +7,13 @@ package:
 
 build:
   number: {{ build }}
-  skip: True  # [not win]
+  noarch: generic
 
 requirements:
   run:
     - menuinst >=2.3.1
+    - __win
+
 test:
   commands:
     - if not exist %PREFIX%\\Menu\\miniforge_console_shortcut_menu.json exit 1  # [win]
